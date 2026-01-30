@@ -1,7 +1,9 @@
 <?php 
+session_start();
 if(!isset($_SESSION['activeUser']))
 {
 	header('Location:index.php');
+  
 }
 ?>
 <!doctype html>
@@ -17,6 +19,8 @@ if(!isset($_SESSION['activeUser']))
     <title>Hello, world!</title>
   </head>
   <body>
+    <h3>Welcome, <?php echo $_SESSION['activeUser']; ?></h3>
+
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">

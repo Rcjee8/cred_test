@@ -15,11 +15,10 @@
 
 <?php 
 
-$username = $_POST['username'];
-$password = $_POST['password'];
-
 if(isset($_POST['login']))
 {
+	$username = $_POST['username'];
+	$password = $_POST['password'];
 	if($username == 'Robin' && $password == '1234')
 	{
 		session_start();
